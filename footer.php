@@ -1,9 +1,14 @@
-<div class="row-fluid">
-	<div class="container">
+		<div class="row-fluid">
+			<div class="container">
 
-		<footer class="footer" role="contentinfo">
-			<div class="inner"></div>
-		</footer>
+				<footer class="footer" role="contentinfo">
+					<div class="inner"></div>
+				</footer>
 
-	</div>
-</div>
+			</div>
+		</div>
+
+		<?php wp_footer(); ?>
+
+	</body>
+</html>
