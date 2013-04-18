@@ -26,6 +26,9 @@ function skeleton_styles() {
 	
 	wp_register_style('helpers', get_template_directory_uri() . '/css/helpers.css');
 	wp_enqueue_style('helpers');
+	
+	wp_register_style('default', get_template_directory_uri() . '/css/default.css');
+	wp_enqueue_style('default');
 }
 
 if (function_exists('register_sidebar'))
