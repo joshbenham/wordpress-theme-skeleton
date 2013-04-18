@@ -1,10 +1,10 @@
-wordpress-skeleton
-==================
+wordpress-theme-skeleton
+========================
 
 [Josh Benham](http://joshbenham.net)'s skeleton theme for wordpress
 
 Overview
 --------
 
-A basic Wordpress skeleton theme that is responsive out of the box by
-harnessing Twitter Bootstrap
+A basic [Wordpress](http://wordpress.org) skeleton theme that is responsive out of the box by
+harnessing [Zurb Foundation](http://foundation.zurb.com/)
