@@ -14,22 +14,6 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-		<?php /* Facebook:
-		<meta property="og:title" content="" />
-		<meta property="og:type" content="" />
-		<meta property="og:image" content="" />
-		<meta property="og:description" content="" />
-		<meta property="fb:admins" content="" />
-		*/ ?>
-
-		<?php /* Twitter:
-		<meta name="twitter:card" content="">
-		<meta name="twitter:site" content="">
-		<meta name="twitter:title" content="">
-		<meta name="twitter:description" content="">
-		<meta name="twitter:url" content="">
-		*/ ?>
-
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
 
 		<?php wp_head(); ?>
