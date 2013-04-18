@@ -40,66 +40,19 @@
 		<![endif]-->
 
 
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="brand" href="/">Skeleton</a>
-					<div class="nav-collapse collapse">
-						<ul class="nav">
-
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<?php $categories = get_categories(array('order' => 'ASC')); ?>
-									<?php foreach ((array)$categories as $category): ?>
-											<li><a href="<?php echo get_category_link($category->term_id); ?>" rel="category"><?php echo $category->name; ?></a></li>
-									<?php endforeach; ?>
-								</ul>
-							</li>
-
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tags <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<?php $tags = get_tags(array('orderby' => 'count', 'order' => 'ASC')); ?>
-									<?php foreach ((array)$tags as $tag): ?>
-											<li><a href="<?php echo get_tag_link($tag->term_id); ?>" rel="tag"><?php echo $tag->name; ?></a></li>
-									<?php endforeach; ?>
-								</ul>
-							</li>
-
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Archives <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li class="divider"></li>
-									<li class="nav-header">Nav header</li>
-									<li><a href="#">Separated link</a></li>
-									<li><a href="#">One more separated link</a></li>
-								</ul>
-							</li>
-
-							<li class="">
-								<a href="/about.html">About</a>
-							</li>
-						</ul>
+		<div class="row">
+			<header role="banner" class="header large-12 columns">
+				<div class="row">
+					<div class="large-6 columns">
+						<h1><?php bloginfo('name'); ?></h1>
+					</div>
+					<div class="large-6 columns">
+						<span class="phone right">Phone Number</span>
 					</div>
 				</div>
-			</div>
-		</div>
+			</header>
 
-		<div class="row-fluid">
-			<div class="container">
-				<header class="header" role="banner">
-
-					<div class="inner"></div>
-
-				</header>
-			</div>
+			<nav role="navigation" class="navigation large-12 columns">
+				<?php wp_nav_menu( array( 'menu' => 'primary-nav', 'container_class' => 'menu-container' ) ); ?>
+			</nav>
 		</div>
