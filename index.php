@@ -23,20 +23,7 @@
 
 				<?php else: ?>
 
-					<article class="post no-results not-found">
-
-						<header class="header">
-							<h1><?php _e('Sorry, there are no posts.'); ?></h1>
-						</header>
-
-						<section class="content">
-							<p><?php _e( 'Apologies, but no posts were found. Perhaps searching will help find a related post.', 'twentytwelve' ); ?></p>
-							<?php get_search_form(); ?>
-						</section>
-
-						<footer class="meta"></footer>
-
-					</article>
+					<?php get_template_part('content-empty'); ?>
 
 				<?php endif; ?>
 

@@ -1,12 +1,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="header">
+	<header>
 
 		<?php if (has_post_thumbnail()): ?>
 			<?php the_post_thumbnail(); ?>
 		<?php endif; ?>
 
-		<h1 class="title">
+		<h1>
 			<?php if (is_single()): ?>
 				<?php the_title(); ?>
 			<?php else: ?>
@@ -18,11 +18,11 @@
 
 	</header>
 
-	<section class="content">
+	<section>
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'skeleton' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'skeleton' ), 'after' => '</div>' ) ); ?>
 	</section>
 
-	<footer class="meta"></footer>
+	<footer></footer>
 
 </article>
