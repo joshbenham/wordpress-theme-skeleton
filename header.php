@@ -17,6 +17,10 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
 
 		<?php wp_head(); ?>
+
+		<!--[if lt IE 9]>
+			<script src="<?php echo get_template_directory_uri() . '/js/vendor/respond/respond.js';?>"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<!--[if lt IE 7]>
