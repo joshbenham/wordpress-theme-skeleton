@@ -1,6 +1,7 @@
 <?php
 
-include('functions/media.php');
-include('functions/sidebars.php');
-include('functions/shortcodes.php');
-include('functions/widgets.php');
+include('includes/functions.php');
+include('includes/media.php');
+include('includes/shortcodes.php');
+include('includes/sidebars.php');
+include('includes/widgets.php');
