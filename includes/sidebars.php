@@ -1,5 +1,9 @@
 <?php
 
+
+/* SIDEBARS --------------------------------------------------------- */
+
+
 if (function_exists('register_sidebar')) {
 
 	$defaults = array(

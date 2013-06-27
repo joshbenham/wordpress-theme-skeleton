@@ -1,5 +1,9 @@
 <?php
 
+
+/* JAVASCRIPTS ------------------------------------------------------ */
+
+
 add_action('wp_enqueue_scripts', 'skeleton_scripts');
 function skeleton_scripts() {
 	wp_register_script('modernizr', get_template_directory_uri() . '/js/vendor/modernizr/modernizr-2.6.2.min.js', false, '2.6.2');
@@ -15,6 +19,10 @@ function skeleton_scripts() {
 	wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true);
 	wp_enqueue_script('main');
 }
+
+
+/* STYLESHEETS ------------------------------------------------------ */
+
 
 add_action('wp_enqueue_scripts', 'skeleton_styles');
 function skeleton_styles() {
