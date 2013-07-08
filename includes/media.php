@@ -13,7 +13,7 @@ function skeleton_scripts() {
 	wp_register_script('jquery', get_template_directory_uri() . '/js/vendor/jquery/jquery-1.10.2.min.js', false, '1.10.2', true);
 	wp_enqueue_script('jquery');
 
-	wp_register_script('foundation', get_template_directory_uri() . '/js/vendor/foundation/foundation-4.2.3.js', array('jquery'), '4.2.3', true);
+	wp_register_script('foundation', get_template_directory_uri() . '/js/vendor/foundation/foundation-4.2.3.min.js', array('jquery'), '4.2.3', true);
 	wp_enqueue_script('foundation');
 
 	wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true);
