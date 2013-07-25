@@ -9,3 +9,23 @@ Base styles and includes for foundation
 
 
 /* GENERIC ---------------------------------------------------------- */
+
+
+
+/* SCAFFOLD --------------------------------------------------------- */
+
+
+.main {
+
+	.row .columns {
+		background: #E7E7E7;
+		border: 1px solid #DDD;
+		font-size: 13px;
+		font-weight: bold;
+		text-indent: 3px;
+		padding-top: 8px;
+		color: #444;
+		padding-bottom: 8px;
+	}
+
+}
