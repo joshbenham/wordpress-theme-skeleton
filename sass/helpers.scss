@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------------ *\
+Component: Helpers;
+Version: 1.0.0;
+Author: Josh Benham;
+Author URI: http://github.com/joshbenham;
+
+Additional helper classes
+\* ------------------------------------------------------------------ */
+
+
+/* GENERIC ---------------------------------------------------------- */
+
+
+/* GRID ------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 768px) {
+	.large-0 { display: none; }
+}
+
+@media only screen and (max-width: 767px) {
+	.small-0 { display: none; }
+}
+
+
+/* CLEARFIX --------------------------------------------------------- */
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
