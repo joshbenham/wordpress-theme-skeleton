@@ -10,18 +10,5 @@ Tags:
 Text Domain: skeleton
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Use it to make something cool, have fun, and share what you've learned with others
 */
-
-/* -------------------------------- *\
- * SCAFFOLD
-\* -------------------------------- */
-
-
-header[role="banner"],
-div[role="main"],
-aside[role="complementary"],
-footer[role="contentinfo"] {
-	margin: 5px 0 5px 0;
-	border: 1px solid black;
-}
