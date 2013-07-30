@@ -17,7 +17,8 @@ Base styles and includes for foundation
 
 .main {
 
-	.row .columns {
+	.row .columns,
+	[class*="block-grid-"] > li {
 		background: #E7E7E7;
 		border: 1px solid #DDD;
 		font-size: 13px;

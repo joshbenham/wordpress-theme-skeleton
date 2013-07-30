@@ -21,14 +21,31 @@ class SkeletonFoundationShortcodes {
 
 
 	public function add_shortcodes() {
+		/* GRID ----------------------------------------------------- */
 		add_shortcode('row', array($this, 'row'));
 		add_shortcode('column', array($this, 'column'));
-
+		/* BLOCKS --------------------------------------------------- */
+		add_shortcode('blocks', array($this, 'blocks'));
+		add_shortcode('block', array($this, 'block'));
+		/* BUTTONS -------------------------------------------------- */
 		add_shortcode('button', array($this, 'button'));
 	}
 
 	public function transform($string) {
 		return esc_attr(str_replace('_', '-', $string));
+	}
+
+	public function classes_to_string($column_classes, $args) {
+		$string = '';
+
+		foreach ($column_classes as $key => $value) {
+			$value = $args['atts'][$key];
+
+			if (!empty($value) && in_array($value, $this->columns))
+				$string .= $this->transform($key).'-'.$this->transform($value).' ';
+		}
+
+		return trim($string);
 	}
 
 
@@ -40,8 +57,6 @@ class SkeletonFoundationShortcodes {
 	}
 
 	public function column($atts, $content = null) {
-		$string = '';
-
 		$column_classes = array(
 			'small' => '',
 			'small_offset' => '',
@@ -56,18 +71,37 @@ class SkeletonFoundationShortcodes {
 			array('class' => '')
 		), $atts));
 
-		foreach ($column_classes as $key => $value) {
-			$value = $$key;
+		$classes = $this->classes_to_string($column_classes, get_defined_vars());
 
-			if (!empty($value) && in_array($value, $this->columns))
-				$string .= $this->transform($key).'-'.$this->transform($value).' ';
-		}
-
-		return '<div class="'.esc_attr(trim($string)).' '.esc_attr(trim($class)).' columns">'.do_shortcode($content).'</div>';
+		return '<div class="'.esc_attr($classes).' '.esc_attr(trim($class)).' columns">'.do_shortcode($content).'</div>';
 	}
 
 
-	/* SHORTCODES: BUTTON ------------------------------------------- */
+	/* SHORTCODES: BLOCKS ------------------------------------------- */
+
+
+	public function blocks($atts, $content = null) {
+		$column_classes = array(
+			'small_block_grid' => '',
+			'large_block_grid' => '',
+		);
+
+		extract(shortcode_atts(array_merge(
+			$column_classes,
+			array('class' => '')
+		), $atts));
+
+		$classes = $this->classes_to_string($column_classes, get_defined_vars());
+
+		return '<ul class="'.esc_attr($classes).' '.esc_attr(trim($class)).'">'.do_shortcode($content).'</ul>';
+	}
+
+	public function block($atts, $content = null) {
+		return '<li>'.do_shortcode($content).'</li>';
+	}
+
+
+	/* SHORTCODES: BUTTONS ------------------------------------------ */
 
 
 	public function button($atts, $content = null) {
