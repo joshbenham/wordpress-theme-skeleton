@@ -9,4 +9,7 @@ Base styles for the modules
 
 ;(function($) {
     "use strict";
+
+    $(document).foundation();
+
 }(jQuery));
