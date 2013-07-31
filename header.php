@@ -29,7 +29,7 @@
 		<header role="banner" class="header large-12 columns">
 			<div class="row">
 				<div class="large-6 columns">
-					<a class="logo" href="<?php echo home_url( '/' ); ?>"><h1><?php bloginfo('name'); ?></h1></a>
+					<a class="logo" href="<?php echo home_url( '/' ); ?>"><span><?php bloginfo('name'); ?></span></a>
 				</div>
 				<div class="large-6 columns">
 					<span class="phone right">Phone Number</span>
