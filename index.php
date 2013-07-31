@@ -10,11 +10,10 @@
 
 <?php get_header(); ?>
 
-	<div class="row">
+	<div role="main" class="main large-12 columns">
+		<div class="row">
 
-		<div role="main" class="main large-9 columns">
-			<div class="inner">
-
+			<div class="content large-9 columns">
 				<?php if (have_posts()): ?>
 
 					<?php while (have_posts()) : the_post(); ?>
@@ -40,16 +39,15 @@
 					<?php get_template_part('pagination'); ?>
 
 				<?php endif; ?>
-
 			</div>
+
+			<aside role="complementary" class="sidebar large-3 columns">
+				<div class="inner">
+					<?php get_sidebar(); ?>
+				</div>
+			</aside>
+
 		</div>
-
-		<aside role="complementary" class="sidebar large-3 columns">
-			<div class="inner">
-				<?php get_sidebar(); ?>
-			</div>
-		</aside>
-
 	</div>
 
 <?php get_footer(); ?>

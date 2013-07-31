@@ -26,19 +26,18 @@
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<div class="row">
-			<header role="banner" class="header large-12 columns">
-				<div class="row">
-					<div class="large-6 columns">
-						<h1><?php bloginfo('name'); ?></h1>
-					</div>
-					<div class="large-6 columns">
-						<span class="phone right">Phone Number</span>
-					</div>
+		<header role="banner" class="header large-12 columns">
+			<div class="row">
+				<div class="large-6 columns">
+					<a class="logo" href="<?php echo home_url( '/' ); ?>"><h1><?php bloginfo('name'); ?></h1></a>
 				</div>
-			</header>
-
-			<nav role="navigation" class="navigation large-12 columns">
-				<?php wp_nav_menu( array( 'menu' => 'primary-nav', 'container_class' => 'menu-container' ) ); ?>
-			</nav>
-		</div>
+				<div class="large-6 columns">
+					<span class="phone right">Phone Number</span>
+				</div>
+			</div>
+			<div class="row">
+				<nav role="navigation" class="navigation large-12 columns">
+					<?php wp_nav_menu( array( 'menu' => 'primary-nav', 'container_class' => 'menu-container' ) ); ?>
+				</nav>
+			</div>
+		</header>
