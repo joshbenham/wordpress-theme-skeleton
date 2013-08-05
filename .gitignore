@@ -2,3 +2,4 @@
 foundation/
 style.css
 .htaccess
+*.DS_Store
