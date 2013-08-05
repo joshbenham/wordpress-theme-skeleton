@@ -77,7 +77,7 @@ class SkeletonFoundationShortcodes {
 
 		$classes = $this->classes_to_string($column_classes, get_defined_vars());
 
-		return '<div class="'.esc_attr($classes).' '.esc_attr(trim($class)).' columns">'.do_shortcode($content).'</div>';
+		return '<div class="columns '.esc_attr($classes).' '.esc_attr(trim($class)).'">'.do_shortcode($content).'</div>';
 	}
 
 
@@ -119,7 +119,7 @@ class SkeletonFoundationShortcodes {
 			? get_permalink((int)$permalink)
 			: $href;
 
-		return '<a href="'.$link.'" class="'.esc_attr(trim($class)).' button">'.do_shortcode($content).'</a>';
+		return '<a href="'.$link.'" class="button '.esc_attr(trim($class)).'">'.do_shortcode($content).'</a>';
 	}
 
 
@@ -131,7 +131,7 @@ class SkeletonFoundationShortcodes {
 			'class' => ''
 		), $atts));
 
-		return '<span class="'.esc_attr(trim($class)).' label">'.do_shortcode($content).'</span>';
+		return '<span class="label '.esc_attr(trim($class)).'">'.do_shortcode($content).'</span>';
 	}
 
 
@@ -143,7 +143,7 @@ class SkeletonFoundationShortcodes {
 			'class' => ''
 		), $atts));
 
-		return '<div data-alert class="'.esc_attr(trim($class)).' alert-box">'.do_shortcode($content).'<a href="#" class="close">&times;</a></div>';
+		return '<div data-alert class="alert-box '.esc_attr(trim($class)).'">'.do_shortcode($content).'<a href="#" class="close">&times;</a></div>';
 	}
 
 
