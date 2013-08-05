@@ -29,6 +29,8 @@ class SkeletonFoundationShortcodes {
 		add_shortcode('block', array($this, 'block'));
 		/* BUTTONS -------------------------------------------------- */
 		add_shortcode('button', array($this, 'button'));
+		/* LABELS --------------------------------------------------- */
+		add_shortcode('label', array($this, 'label'));
 	}
 
 	public function transform($string) {
@@ -117,6 +119,19 @@ class SkeletonFoundationShortcodes {
 
 		return '<a href="'.$link.'" class="'.esc_attr(trim($class)).' button">'.do_shortcode($content).'</a>';
 	}
+
+
+	/* SHORTCODES: LABELS --------------------------------------------- */
+
+
+	public function label($atts, $content = null) {
+		extract(shortcode_atts(array(
+			'class' => ''
+		), $atts));
+
+		return '<span class="'.esc_attr(trim($class)).' label">'.do_shortcode($content).'</span>';
+	}
+
 
 }
 
