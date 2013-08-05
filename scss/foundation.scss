@@ -20,7 +20,12 @@ Base styles and includes for foundation
 	background: #E7E7E7;
 	border-bottom: 1px solid #DDDDDD;
 
-	ul { list-style-type: none; }
+	ul {
+		height: 66px;
+		margin-bottom: 0;
+		line-height: 66px;
+		list-style-type: none;
+	}
 }
 
 .content {
@@ -39,8 +44,18 @@ Base styles and includes for foundation
 
 }
 
+.sidebar {
+	ul {
+		list-style-type: none;
+	}
+}
+
 .footer {
 	padding: 20px;
 	background: #E7E7E7;
 	border-top: 1px solid #DDDDDD;
+
+	ul {
+		list-style-type: none;
+	}
 }
