@@ -23,6 +23,20 @@ Additional helper classes
 }
 
 
+/* ALIGNMENT -------------------------------------------------------- */
+
+
+@media only screen and (min-width: 768px) {
+	.right-for-large { text-align: right; }
+	.left-for-large { text-align: left; }
+}
+
+@media only screen and (max-width: 767px) {
+	.right-for-small { text-align: right; }
+	.left-for-small { text-align: left; }
+}
+
+
 /* CLEARFIX --------------------------------------------------------- */
 
 
