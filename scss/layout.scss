@@ -17,8 +17,12 @@ Base styles for the layout
 .header {
 
 	.logo {
+		@include inline-block;
+		width: 135px;
+		height: 66px;
+		background-image: url(images/logo.png);
 
-		span { display: block; }
+		span { display: none; }
 	}
 
 }

@@ -28,16 +28,13 @@
 
 		<header role="banner" class="header large-12 columns">
 			<div class="row">
-				<div class="large-6 columns">
+				<div class="small-12 large-4 columns">
 					<a class="logo" href="<?php echo home_url( '/' ); ?>"><span><?php bloginfo('name'); ?></span></a>
 				</div>
-				<div class="large-6 columns">
-					<span class="phone right">Phone Number</span>
+				<div class="small-12 large-8 columns">
+					<nav role="navigation" class="navigation right-for-large">
+						<?php wp_nav_menu( array(  'menu' => 'primary-nav', 'menu_class' => 'menu right-for-large', 'container' => false ) ); ?>
+					</nav>
 				</div>
-			</div>
-			<div class="row">
-				<nav role="navigation" class="navigation large-12 columns">
-					<?php wp_nav_menu( array( 'menu' => 'primary-nav', 'container_class' => 'menu-container' ) ); ?>
-				</nav>
 			</div>
 		</header>
