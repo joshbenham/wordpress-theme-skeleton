@@ -1,7 +1,5 @@
 <?php
 /**
- * Template Name: Main
- *
  * @package joshbenham
  * @subpackage Skeleton
  * @since February 18th 2013
