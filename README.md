@@ -12,6 +12,14 @@ harnessing [Zurb Foundation](http://foundation.zurb.com/)
 Installation
 ------------
 
+Install wordpress theme
+
+```sh
+$ cd wordpress-directory/wp-content/themes
+$ git clone https://github.com/joshbenham/wordpress-theme-skeleton.git skeleton
+$ cd skeleton
+```
+
 Install SASS and Compass
 
 ```sh
@@ -19,12 +27,11 @@ $ gem update --system
 $ gem install sass
 $ gem install compass
 ```
-Install wordpress theme
+
+Install Grunt and Plugins (might need to use sudo)
 
 ```sh
-$ cd wordpress-directory/wp-content/themes
-$ git clone https://github.com/joshbenham/wordpress-theme-skeleton.git skeleton
-$ cd skeleton
+$ npm install
 ```
 
 Install the standalone Foundation
@@ -36,10 +43,10 @@ $ mv foundation-scss-standalone foundation
 $ rm scss-standalone.zip
 ```
 
-Generating SASS files
+Generating concatenated and combined CSS and Javascript files
 
 ```sh
-$ make
+$ grunt watch
 ```
 
 Dependencies
