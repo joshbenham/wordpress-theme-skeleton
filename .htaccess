@@ -1,1 +1,11 @@
 Options -Indexes
+
+<FilesMatch "\.(scss|json|rb|gitignore|md)$">
+	order allow,deny
+	deny from all
+</FilesMatch>
+
+<Files Gruntfile.js>
+	order allow,deny
+	deny from all
+</Files>
