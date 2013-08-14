@@ -8,7 +8,7 @@ Base styles for the modules
 \* ------------------------------------------------------------------ */
 
 ;(function($) {
-    "use strict";
+    'use strict';
 
     $(document).foundation();
 
