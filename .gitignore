@@ -5,5 +5,4 @@ foundation/
 node_modules/
 
 style.css
-js/scripts.js
-js/scripts.min.js
+js/main.min.js
