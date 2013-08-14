@@ -48,12 +48,7 @@
           noarg: true,
           quotmark: true,
           sub: true,
-          undef: true,
-          globals: {
-            jQuery: true,
-            exports: true,
-            module: false
-          }
+          undef: true
         }
       },
       concat: {
