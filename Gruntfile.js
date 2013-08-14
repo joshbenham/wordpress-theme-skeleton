@@ -5,14 +5,18 @@
 
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-      jsfiles: [
+      scripts: [
         'foundation/js/vendor/jquery.js',
         'foundation/js/foundation/foundation.js',
         'js/main.js'
       ],
+      images: [
+        'images/**/*.png',
+        'images/**/*.jpg'
+      ],
 
 
-      /* CSS COMPONENT ------------------------------------------------ */
+      /* CSS COMPONENT ---------------------------------------------- */
 
 
       compass: {
@@ -26,17 +30,36 @@
       },
 
 
-      /* JS COMPONENT ------------------------------------------------- */
+      /* JS COMPONENT ----------------------------------------------- */
 
 
       jshint: {
         all: ['Gruntfile.js', 'js/main.js'],
-        options: { jshintrc: '.jshintrc' }
+        options: {
+          boss: true,
+          browser: true,
+          curly: true,
+          eqeqeq: true,
+          eqnull: true,
+          immed: true,
+          jquery: true,
+          latedef: true,
+          newcap: true,
+          noarg: true,
+          quotmark: true,
+          sub: true,
+          undef: true,
+          globals: {
+            jQuery: true,
+            exports: true,
+            module: false
+          }
+        }
       },
       concat: {
         dist: {
-          src: '<%= jsfiles %>',
-          dest: 'js/scripts.js'
+          src: '<%= scripts %>',
+          dest: 'js/main.min.js'
         }
       },
       uglify: {
@@ -44,33 +67,33 @@
           mangle: true
         },
         js: {
-          src: 'js/scripts.js',
-          dest:'js/scripts.min.js'
+          src: 'js/main.min.js',
+          dest:'js/main.min.js'
         }
       },
 
 
-      /* WATCH COMPONENT ---------------------------------------------- */
+      /* WATCH COMPONENT -------------------------------------------- */
 
 
       watch: {
         scripts: {
-          files: '<%= jsfiles %>',
+          files: '<%= scripts %>',
           tasks: ['jshint', 'concat', 'uglify']
         },
         css: {
           files: '<%= compass.dist.options.specify %>',
           tasks: ['compass']
-        }
+        },
       }
     });
 
     // Load plugins.
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task.
     grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'compass']);

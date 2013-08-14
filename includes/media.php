@@ -10,8 +10,8 @@ function skeleton_scripts() {
 	wp_enqueue_script('modernizr');
 
 	wp_deregister_script('jquery');
-	wp_register_script('scripts.min', get_template_directory_uri() . '/js/scripts.min.js', false, false, true);
-	wp_enqueue_script('scripts.min');
+	wp_register_script('main.min', get_template_directory_uri() . '/js/main.min.js', false, false, true);
+	wp_enqueue_script('main.min');
 }
 
 
