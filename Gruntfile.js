@@ -14,6 +14,11 @@
         'images/**/*.png',
         'images/**/*.jpg'
       ],
+      scss: [
+        'style.scss',
+        'foundation/scss/**/*.scss',
+        'scss/**/*.scss'
+      ],
 
 
       /* CSS COMPONENT ---------------------------------------------- */
@@ -77,7 +82,7 @@
           tasks: ['jshint', 'concat', 'uglify']
         },
         css: {
-          files: '<%= compass.dist.options.specify %>',
+          files: '<%= scss %>',
           tasks: ['compass']
         },
       }
