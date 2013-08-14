@@ -1,8 +1,9 @@
+*.DS_Store
+
 .sass-cache/
 foundation/
+node_modules/
+
 style.css
 js/scripts.js
 js/scripts.min.js
-.htaccess
-*.DS_Store
-node_modules/
