@@ -1,5 +1,7 @@
 <?php
 /**
+ * Template Name: Default Template /w Right Sidebar
+ *
  * @package joshbenham
  * @subpackage Skeleton
  * @since February 18th 2013
@@ -11,7 +13,7 @@
 	<div role="main" class="main large-12 columns">
 		<div class="row">
 
-			<div class="content large-12 columns">
+			<div class="content large-9 columns">
 				<?php if (have_posts()): ?>
 
 					<?php while (have_posts()) : the_post(); ?>
@@ -38,6 +40,12 @@
 
 				<?php endif; ?>
 			</div>
+
+			<aside role="complementary" class="sidebar large-3 columns">
+				<div class="inner">
+					<?php get_sidebar(); ?>
+				</div>
+			</aside>
 
 		</div>
 	</div>
