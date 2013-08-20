@@ -27,8 +27,13 @@
       compass: {
         dist: {
           options: {
-            config: 'config.rb',
+            httpPath: '/',
+            cssDir: '',
+            sassDir: '',
+            imagesDir: 'images',
+            javascriptsDir: 'js',
             specify: 'style.scss',
+            outputStyle: 'compress',
             trace: true
           }
         }
@@ -53,7 +58,10 @@
           noarg: true,
           quotmark: true,
           sub: true,
-          undef: true
+          undef: true,
+          globals: {
+            module: true
+          }
         }
       },
       concat: {
