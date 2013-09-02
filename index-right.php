@@ -10,7 +10,7 @@
 
 <?php get_header(); ?>
 
-	<div role="main" class="main large-12 columns">
+	<div role="main" class="main">
 		<div class="row">
 
 			<div class="content large-9 columns">

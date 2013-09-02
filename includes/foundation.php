@@ -112,6 +112,7 @@ class SkeletonFoundationShortcodes {
 
 	/* SHORTCODES: SECTIONS ----------------------------------------- */
 
+
 	public function sections($atts, $content = null) {
 		extract(shortcode_atts(array(
 			'class' => '',
@@ -133,6 +134,7 @@ class SkeletonFoundationShortcodes {
 			<div class="content" data-section-content>'.do_shortcode($content).'</div>
 		</section>';
 	}
+
 
 	/* SHORTCODES: BUTTONS ------------------------------------------ */
 

@@ -10,7 +10,7 @@
 
 <?php get_header(); ?>
 
-	<div role="main" class="main large-12 columns">
+	<div role="main" class="main">
 		<div class="row">
 
 			<aside role="complementary" class="sidebar large-3 columns">
