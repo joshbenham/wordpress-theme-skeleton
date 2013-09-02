@@ -113,10 +113,11 @@ class SkeletonFoundationShortcodes {
 	public function sections($atts, $content = null) {
 		extract(shortcode_atts(array(
 			'class' => '',
-			'type' => 'accordion'
+			'type' => 'accordion',
+			'options' => ''
 		), $atts));
 
-		return '<div data-section="'.esc_attr(trim($type)).'" class="section-container '.esc_attr(trim($type)).' '.esc_attr(trim($class)).'">'.do_shortcode($content).'</div>';
+		return '<div data-options="'.esc_attr(trim($options)).'" data-section="'.esc_attr(trim($type)).'" class="section-container '.esc_attr(trim($type)).' '.esc_attr(trim($class)).'">'.do_shortcode($content).'</div>';
 	}
 
 	public function section($atts, $content = null) {
