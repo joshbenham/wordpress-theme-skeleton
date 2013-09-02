@@ -8,6 +8,7 @@
       scripts: [
         'foundation/js/vendor/jquery.js',
         'foundation/js/foundation/foundation.js',
+        'foundation/js/foundation/foundation.section.js',
         'js/main.js'
       ],
       images: [

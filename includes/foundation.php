@@ -27,6 +27,9 @@ class SkeletonFoundationShortcodes {
 		/* BLOCKS --------------------------------------------------- */
 		add_shortcode('blocks', array($this, 'blocks'));
 		add_shortcode('block', array($this, 'block'));
+		/* SECTIONS ------------------------------------------------- */
+		add_shortcode('sections', array($this, 'sections'));
+		add_shortcode('section', array($this, 'section'));
 		/* BUTTONS -------------------------------------------------- */
 		add_shortcode('button', array($this, 'button'));
 		/* LABELS --------------------------------------------------- */
@@ -104,6 +107,29 @@ class SkeletonFoundationShortcodes {
 		return '<li>'.do_shortcode($content).'</li>';
 	}
 
+
+	/* SHORTCODES: SECTIONS ----------------------------------------- */
+
+	public function sections($atts, $content = null) {
+		extract(shortcode_atts(array(
+			'class' => '',
+			'type' => 'accordion'
+		), $atts));
+
+		return '<div data-section="'.esc_attr(trim($type)).'" class="section-container '.esc_attr(trim($type)).' '.esc_attr(trim($class)).'">'.do_shortcode($content).'</div>';
+	}
+
+	public function section($atts, $content = null) {
+		extract(shortcode_atts(array(
+			'class' => '',
+			'title' => ''
+		), $atts));
+
+		return '<section class="'.esc_attr(trim($class)).'">
+			<p class="title" data-section-title><a href="#">'.esc_attr(trim($title)).'</a></p>
+			<div class="content" data-section-content>'.do_shortcode($content).'</div>
+		</section>';
+	}
 
 	/* SHORTCODES: BUTTONS ------------------------------------------ */
 
