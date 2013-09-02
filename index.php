@@ -15,20 +15,26 @@
 				<?php if (have_posts()): ?>
 
 					<?php while (have_posts()) : the_post(); ?>
+
 						<?php if (is_page()): ?>
-							<?php get_template_part('content-page', get_post_format()); ?>
+
+							<?php get_template_part('content', 'page'); ?>
+
 						<?php else: ?>
-							<?php get_template_part('content', get_post_format()); ?>
+
+							<?php get_template_part('content'); ?>
+
 						<?php endif; ?>
+
 					<?php endwhile; ?>
 
 				<?php elseif (is_404()): ?>
 
-					<?php get_template_part('content-404'); ?>
+					<?php get_template_part('content', '404'); ?>
 
 				<?php else: ?>
 
-					<?php get_template_part('content-empty'); ?>
+					<?php get_template_part('content', 'empty'); ?>
 
 				<?php endif; ?>
 
