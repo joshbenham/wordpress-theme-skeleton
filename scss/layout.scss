@@ -27,7 +27,7 @@ Base styles for the layout
 /* HEADER ----------------------------------------------------------- */
 
 
-.header {
+#header {
 
 	.logo {
 		@include inline-block;
@@ -44,7 +44,7 @@ Base styles for the layout
 /* MAIN ------------------------------------------------------------- */
 
 
-.main {
+#main {
 
 }
 
@@ -52,7 +52,7 @@ Base styles for the layout
 /* SIDEBAR ---------------------------------------------------------- */
 
 
-.sidebar {
+#sidebar {
 
 }
 
@@ -60,6 +60,6 @@ Base styles for the layout
 /* FOOTER ----------------------------------------------------------- */
 
 
-.footer {
+#footer {
 
 }

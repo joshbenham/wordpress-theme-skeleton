@@ -10,10 +10,10 @@
 
 <?php get_header(); ?>
 
-	<div role="main" class="main">
+	<div role="main" id="main">
 		<div class="row">
 
-			<div class="content large-9 columns">
+			<div id="content" class="large-9 columns">
 				<?php if (have_posts()): ?>
 
 					<?php while (have_posts()) : the_post(); ?>
@@ -41,7 +41,7 @@
 				<?php endif; ?>
 			</div>
 
-			<aside role="complementary" class="sidebar large-3 columns">
+			<aside role="complementary" id="sidebar" class="large-3 columns">
 				<div class="inner">
 					<?php get_sidebar(); ?>
 				</div>

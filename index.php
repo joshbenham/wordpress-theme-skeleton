@@ -8,10 +8,10 @@
 
 <?php get_header(); ?>
 
-	<div role="main" class="main">
+	<div role="main" id="main">
 		<div class="row">
 
-			<div class="content large-12 columns">
+			<div id="content" class="large-12 columns">
 				<?php if (have_posts()): ?>
 
 					<?php while (have_posts()) : the_post(); ?>

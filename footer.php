@@ -1,4 +1,4 @@
-		<footer role="contentinfo" class="footer large-12 columns">
+		<footer role="contentinfo" id="footer" class="large-12 columns">
 			<div class="row">
 				<div class="large-6 columns">
 					<div class="navigation-inline">&copy; Copyright <?php wp_nav_menu( array( 'menu' => 'footer-nav', 'container_class' => 'menu-container' ) ); ?></div>
