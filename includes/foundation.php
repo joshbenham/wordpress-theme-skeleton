@@ -32,6 +32,8 @@ class SkeletonFoundationShortcodes {
 		add_shortcode('section', array($this, 'section'));
 		/* BUTTONS -------------------------------------------------- */
 		add_shortcode('button', array($this, 'button'));
+		/* TOOLTIP -------------------------------------------------- */
+		add_shortcode('tooltip', array($this, 'tooltip'));
 		/* LABELS --------------------------------------------------- */
 		add_shortcode('label', array($this, 'label'));
 		/* ALERTS --------------------------------------------------- */
@@ -117,7 +119,7 @@ class SkeletonFoundationShortcodes {
 			'options' => ''
 		), $atts));
 
-		return '<div data-options="'.esc_attr(trim($options)).'" data-section="'.esc_attr(trim($type)).'" class="section-container '.esc_attr(trim($type)).' '.esc_attr(trim($class)).'">'.do_shortcode($content).'</div>';
+		return '<div data-section="'.esc_attr(trim($type)).'" data-options="'.esc_attr(trim($options)).'" class="section-container '.esc_attr(trim($type)).' '.esc_attr(trim($class)).'">'.do_shortcode($content).'</div>';
 	}
 
 	public function section($atts, $content = null) {
@@ -147,6 +149,21 @@ class SkeletonFoundationShortcodes {
 			: $href;
 
 		return '<a href="'.$link.'" class="button '.esc_attr(trim($class)).'">'.do_shortcode($content).'</a>';
+	}
+
+
+	/* SHORTCODES: TOOLTIPS ----------------------------------------- */
+
+
+	public function tooltip($atts, $content = null) {
+		extract(shortcode_atts(array(
+			'class' => '',
+			'title' => '',
+			'width' => '',
+			'options' => ''
+		), $atts));
+
+		return '<span data-tooltip data-options="'.esc_attr(trim($options)).'" data-width="'.esc_attr(trim($width)).'" class="has-tip '.esc_attr(trim($class)).'" title="'.esc_attr(trim($title)).'">'.do_shortcode($content).'</span>';
 	}
 
 
