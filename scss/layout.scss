@@ -11,6 +11,19 @@ Base styles for the layout
 /* GENERIC ---------------------------------------------------------- */
 
 
+@media only screen and (max-width: 767px) {
+	.column,
+	.columns {
+		padding-left: ($column-gutter / 4);
+		padding-right: ($column-gutter / 4);
+	}
+	.row .row {
+		margin-left: -($column-gutter / 4);
+		margin-right: -($column-gutter / 4);
+	}
+}
+
+
 /* HEADER ----------------------------------------------------------- */
 
 
