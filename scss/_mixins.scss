@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------------ *\
+Component: Mixins;
+Version: 1.0.0;
+Author: Josh Benham;
+Author URI: http://github.com/joshbenham;
+
+Additional mixins
+\* ------------------------------------------------------------------ */
+
+
+/* MEDIA QUERY ------------------------------------------------------ */
+
+
+@mixin multiple($command, $mobile-size:false, $small-size:false, $medium-size:false, $large-size:false) {
+	@if $mobile-size {
+		#{$command}: $mobile-size;
+	}
+	@if $small-size {
+		@media #{$small} { #{$command}: $small-size; }
+	}
+	@if $medium-size {
+		@media #{$medium} { #{$command}: $medium-size; }
+	}
+	@if $large-size {
+		@media #{$large} { #{$command}: $large-size; }
+	}
+}
