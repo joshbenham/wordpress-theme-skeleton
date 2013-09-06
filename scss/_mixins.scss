@@ -25,3 +25,27 @@ Additional mixins
 		@media (min-width: $large-screen) { #{$command}: $large-size; }
 	}
 }
+
+
+/* PADDING ---------------------------------------------------------- */
+
+
+@mixin padding($top:false, $right:false, $bottom:false, $left:false) {
+
+	@if $top {
+		@include multiple(padding-top, $top / 3, $top / 2, $top)
+	}
+
+	@if $right {
+		@include multiple(padding-right, $right / 3, $right / 2, $right)
+	}
+
+	@if $bottom {
+		@include multiple(padding-bottom, $bottom / 3, $bottom / 2, $bottom)
+	}
+
+	@if $left {
+		@include multiple(padding-left, $left / 3, $left / 2, $left)
+	}
+
+}
