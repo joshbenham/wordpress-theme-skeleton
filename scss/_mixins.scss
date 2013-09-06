@@ -16,12 +16,12 @@ Additional mixins
 		#{$command}: $mobile-size;
 	}
 	@if $small-size {
-		@media #{$small} { #{$command}: $small-size; }
+		@media (min-width: $small-screen) and (max-width: $medium-screen) { #{$command}: $small-size; }
 	}
 	@if $medium-size {
-		@media #{$medium} { #{$command}: $medium-size; }
+		@media (min-width: $medium-screen) and (max-width: $large-screen) { #{$command}: $medium-size; }
 	}
 	@if $large-size {
-		@media #{$large} { #{$command}: $large-size; }
+		@media (min-width: $large-screen) { #{$command}: $large-size; }
 	}
 }
