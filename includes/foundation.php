@@ -196,3 +196,4 @@ class SkeletonFoundationShortcodes {
 }
 
 new SkeletonFoundationShortcodes();
+
