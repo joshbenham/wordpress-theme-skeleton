@@ -8,8 +8,8 @@ TODO
   - Simplify the content part of the templates
 
 ###### SASS
-  - Create a module folder so its easier to reuse modules
   - Look at mixins to create
+  - ~~Create a module folder so its easier to reuse modules~~
 
 ###### JavaScript
   - Add waypoints to vendor
