@@ -52,8 +52,9 @@ $ grunt watch
 Dependencies
 ------------
 
- - [Normalize](http://necolas.github.io/normalize.css/) 2.1.1
- - [Foundation](http://foundation.zurb.com/) 4.2.3
- - [Modernizr](http://modernizr.com/) 2.6.2
- - [jQuery](http://jquery.com/) 1.10.2
+ - [Foundation](http://foundation.zurb.com/)
+ - [Normalize](http://necolas.github.io/normalize.css/)
+ - [Modernizr](http://modernizr.com/)
+ - [jQuery](http://jquery.com/)
  - [Respond.js](https://github.com/scottjehl/Respond) 1.1.0
+ - [Picturefill](https://github.com/scottjehl/picturefill) 1.2.0
