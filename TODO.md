@@ -12,7 +12,7 @@ TODO
   - ~~Create a module folder so its easier to reuse modules~~
 
 ###### JavaScript
-  - Add waypoints to vendor
+  - ~~Add waypoints to vendor~~
   - ~~Add picturefill to vendor~~
 
 ###### Layout

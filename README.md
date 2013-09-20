@@ -58,3 +58,4 @@ Dependencies
  - [jQuery](http://jquery.com/)
  - [Respond.js](https://github.com/scottjehl/Respond) 1.1.0
  - [Picturefill](https://github.com/scottjehl/picturefill) 1.2.0
+ - [Waypoints](https://github.com/imakewebthings/jquery-waypoints) 2.0.3

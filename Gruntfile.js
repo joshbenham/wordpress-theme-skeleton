@@ -11,6 +11,7 @@
         'foundation/js/foundation/foundation.section.js',
         'foundation/js/foundation/foundation.tooltips.js',
         'js/vendor/picturefill/picturefill.js',
+        'js/vendor/jquery/waypoints/waypoints.js',
         'js/main.js'
       ],
       images: [
