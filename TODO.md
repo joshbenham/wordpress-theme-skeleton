@@ -12,8 +12,8 @@ TODO
   - Look at mixins to create
 
 # JavaScript
-  - Add picturefill to vendor
   - Add waypoints to vendor
+  - ~~Add picturefill to vendor~~
 
 # Layout
   - Work on the default scaffolding theme
