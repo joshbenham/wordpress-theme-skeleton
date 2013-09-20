@@ -1,6 +1,6 @@
 Options -Indexes
 
-<FilesMatch "\.(scss|jshintrc|json|rb|gitignore|md)$">
+<FilesMatch "\.(scss|json|rb|gitignore|md)$">
 	order allow,deny
 	deny from all
 </FilesMatch>
