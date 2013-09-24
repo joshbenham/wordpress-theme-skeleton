@@ -4,11 +4,11 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<meta charset="<?php bloginfo( 'charset' ); ?>">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<meta name="keywords" content="">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
 
