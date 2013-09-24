@@ -23,7 +23,7 @@ Base styles for the modules
 
 
 	var triggerPicturefill = function(e) {
-		/*jshint validthis:true */
+		/* jshint validthis:true */
 		$(this).attr('data-picture','').removeClass('rimg-block');
 		picturefill();
 
