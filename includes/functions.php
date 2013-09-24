@@ -13,4 +13,3 @@ function cleanup_head() {
 	remove_action('wp_head', 'wlwmanifest_link');
 	remove_action('wp_head', 'wp_generator');
 }
-

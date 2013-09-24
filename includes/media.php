@@ -22,4 +22,3 @@ add_action('wp_enqueue_scripts', 'skeleton_styles');
 function skeleton_styles() {
 
 }
-
