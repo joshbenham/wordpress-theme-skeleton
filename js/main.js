@@ -6,10 +6,15 @@ Author URI: http://github.com/joshbenham;
 
 Base styles for the modules
 \* ------------------------------------------------------------------ */
+
 /* globals picturefill */
 
 ;(function($) {
 	'use strict';
+
+
+/* GENERIC ---------------------------------------------------------- */
+
 
 	$(document).foundation();
 
@@ -32,5 +37,12 @@ Base styles for the modules
 		.bullseye()
 		.addClass('rimg-block');
 
+
+/* ON READY --------------------------------------------------------- */
+
+
+	$(function() {
+
+	});
 
 }(jQuery));
