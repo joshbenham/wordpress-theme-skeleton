@@ -8,44 +8,42 @@
 
 <?php get_header(); ?>
 
-	<div role="main" class="main">
-		<div class="row">
+	<div role="main" class="main row">
 
-			<div class="content large-12 columns">
-				<?php if (have_posts()): ?>
+		<div class="content large-12 columns">
+			<?php if (have_posts()): ?>
 
-					<?php while (have_posts()) : the_post(); ?>
+				<?php while (have_posts()) : the_post(); ?>
 
-						<?php if (is_page()): ?>
+					<?php if (is_page()): ?>
 
-							<?php get_template_part('content', 'page'); ?>
+						<?php get_template_part('content', 'page'); ?>
 
-						<?php else: ?>
+					<?php else: ?>
 
-							<?php get_template_part('content'); ?>
+						<?php get_template_part('content'); ?>
 
-						<?php endif; ?>
+					<?php endif; ?>
 
-					<?php endwhile; ?>
+				<?php endwhile; ?>
 
-				<?php elseif (is_404()): ?>
+			<?php elseif (is_404()): ?>
 
-					<?php get_template_part('content', '404'); ?>
+				<?php get_template_part('content', '404'); ?>
 
-				<?php else: ?>
+			<?php else: ?>
 
-					<?php get_template_part('content', 'empty'); ?>
+				<?php get_template_part('content', 'empty'); ?>
 
-				<?php endif; ?>
+			<?php endif; ?>
 
-				<?php if ( $wp_query->max_num_pages > 1 ) : ?>
+			<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
-					<?php get_template_part('pagination'); ?>
+				<?php get_template_part('pagination'); ?>
 
-				<?php endif; ?>
-			</div>
-
+			<?php endif; ?>
 		</div>
+
 	</div>
 
 <?php get_footer(); ?>
