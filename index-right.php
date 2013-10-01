@@ -10,7 +10,8 @@
 
 <?php get_header(); ?>
 
-	<div role="main" class="main row">
+	<div role="main" class="main">
+		<div class="row">
 
 		<div class="content large-9 columns">
 			<?php if (have_posts()): ?>
@@ -46,6 +47,7 @@
 			</div>
 		</aside>
 
+		</div>
 	</div>
 
 <?php get_footer(); ?>
