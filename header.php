@@ -12,10 +12,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<link href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" rel="shortcut icon">
+		<link href="<?php echo get_template_directory_uri(); ?>/images/touch.png" rel="apple-touch-icon-precomposed">
+
 		<?php wp_head(); ?>
 
 		<!--[if lt IE 9]>
-			<script src="<?php echo get_template_directory_uri() . '/js/vendor/respond/respond.js';?>"></script>
+			<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/respond/respond.js"></script>
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>
