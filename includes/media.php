@@ -20,5 +20,6 @@ function skeleton_scripts() {
 
 add_action('wp_enqueue_scripts', 'skeleton_styles');
 function skeleton_styles() {
-
+	wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0');
+	wp_enqueue_style('style');
 }
