@@ -35,7 +35,7 @@
 
 				<div class="small-12 large-8 columns">
 					<nav role="navigation" class="navigation right-for-large">
-						<?php wp_nav_menu( array(  'menu' => 'primary-nav', 'menu_class' => 'menu right-for-large', 'container' => false ) ); ?>
+						<?php wp_nav_menu( array(  'theme_location' => 'primary-menu', 'menu_class' => 'menu right-for-large', 'container' => false ) ); ?>
 					</nav>
 				</div>
 
