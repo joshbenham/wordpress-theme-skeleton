@@ -4,30 +4,53 @@
 /* ADDITIONAL FILES ------------------------------------------------- */
 
 
-include_once(get_template_directory_uri().'/includes/foundation.php');
-include_once(get_template_directory_uri().'/includes/functions.php');
-include_once(get_template_directory_uri().'/includes/shortcodes.php');
+include_once('includes/foundation.php');
+include_once('includes/functions.php');
+include_once('includes/shortcodes.php');
 
 
-/* THEME SETUP ------------------------------------------------------ */
+/* ADD THEME SUPPORT ------------------------------------------------ */
 
 
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
+add_theme_support('automatic-feed-links');
 
-function skeleton_cleanup_head() {
-	remove_action('wp_head', 'rsd_link');
-	remove_action('wp_head', 'wlwmanifest_link');
-	remove_action('wp_head', 'wp_generator');
-}
 
-add_action('init', 'skeleton_cleanup_head');
+/* REMOVE DEFAULT SETTINGS ------------------------------------------ */
+
+
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'rel_canonical');
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+
+/* ADD EXTRA SETTINGS ----------------------------------------------- */
+
+
+add_filter('widget_text', 'do_shortcode');
+add_filter('widget_text', 'shortcode_unautop');
+add_filter('the_excerpt', 'do_shortcode');
+add_filter('the_excerpt', 'shortcode_unautop');
+
+
+/* SHORTCODE PARAGRAPH HACK ----------------------------------------- */
+
+
+remove_filter('the_content', 'wpautop');
+add_filter('the_content', 'wpautop' , 99);
+add_filter('the_content', 'shortcode_unautop',100);
+add_filter('widget_text', 'do_shortcode');
 
 
 /* SCRIPTS & STYLES ------------------------------------------------- */
 
 
-function skeleton_scripts() {
+function skeleton_enqueue_scripts() {
 	wp_register_script('modernizr', get_template_directory_uri() . '/foundation/js/vendor/custom.modernizr.js', false, '2.6.2');
 	wp_enqueue_script('modernizr');
 
@@ -36,14 +59,14 @@ function skeleton_scripts() {
 	wp_enqueue_script('main.min');
 }
 
-function skeleton_styles() {
+function skeleton_enqueue_styles() {
 	wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0');
 	wp_enqueue_style('style');
 }
 
 
-add_action('wp_enqueue_scripts', 'skeleton_scripts');
-add_action('wp_enqueue_scripts', 'skeleton_styles');
+add_action('wp_enqueue_scripts', 'skeleton_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'skeleton_enqueue_styles');
 
 
 /* MENU LOCATIONS --------------------------------------------------- */
@@ -88,12 +111,3 @@ register_sidebar(array_merge(array(
 	'id' => 'footer-three',
 	'description' => 'Sidebar that appears on the footer at three',
 ), $defaults));
-
-
-/* EXTRAS ----------------------------------------------------------- */
-
-
-remove_filter( 'the_content', 'wpautop' );
-add_filter( 'the_content', 'wpautop' , 99);
-add_filter( 'the_content', 'shortcode_unautop',100 );
-add_filter('widget_text', 'do_shortcode');
