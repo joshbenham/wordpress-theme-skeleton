@@ -42,9 +42,7 @@
 		</div>
 
 		<aside role="complementary" class="sidebar large-3 columns">
-			<div class="inner">
-				<?php get_sidebar(); ?>
-			</div>
+			<?php get_sidebar(); ?>
 		</aside>
 
 		</div>
