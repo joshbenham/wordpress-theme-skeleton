@@ -9,11 +9,19 @@ include_once(get_template_directory_uri().'/includes/functions.php');
 include_once(get_template_directory_uri().'/includes/shortcodes.php');
 
 
-/* THEME SUPPORT ---------------------------------------------------- */
+/* THEME SETUP ------------------------------------------------------ */
 
 
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
+
+function skeleton_cleanup_head() {
+	remove_action('wp_head', 'rsd_link');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'wp_generator');
+}
+
+add_action('init', 'skeleton_cleanup_head');
 
 
 /* SCRIPTS & STYLES ------------------------------------------------- */
