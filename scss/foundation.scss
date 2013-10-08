@@ -32,14 +32,14 @@ Base styles and includes for foundation
 
 	.row .columns,
 	[class*="block-grid-"] > li {
-		background: #E7E7E7;
-		border: 1px solid #DDD;
+		padding-top: 8px;
+		padding-bottom: 8px;
 		font-size: 13px;
 		font-weight: bold;
 		text-indent: 3px;
-		padding-top: 8px;
 		color: #444;
-		padding-bottom: 8px;
+		background: #E7E7E7;
+		border: 1px solid #DDD;
 	}
 
 }

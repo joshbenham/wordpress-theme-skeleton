@@ -39,26 +39,30 @@ Additional helper classes
 /* GRID ------------------------------------------------------------- */
 
 
-@media only screen and (min-width: 768px) {
-	.large-0 { display: none; }
+@media only screen and (max-width: $small-screen - 1) {
+	.small-0 { display: none; }
 }
 
-@media only screen and (max-width: 767px) {
-	.small-0 { display: none; }
+@media only screen and (min-width: $small-screen) {
+	.large-0 { display: none; }
 }
 
 
 /* ALIGNMENT -------------------------------------------------------- */
 
 
-@media only screen and (min-width: 768px) {
-	.right-for-large { text-align: right; }
-	.left-for-large { text-align: left; }
+@media only screen and (max-width: $small-screen - 1) {
+	.right-for-small { float: right; }
+	.left-for-small { float: left; }
+	.text-right-for-small { text-align: right; }
+	.text-left-for-small { text-align: left; }
 }
 
-@media only screen and (max-width: 767px) {
-	.right-for-small { text-align: right; }
-	.left-for-small { text-align: left; }
+@media only screen and (min-width: $small-screen) {
+	.right-for-large { float: right; }
+	.left-for-large { float: left; }
+	.text-right-for-large { text-align: right; }
+	.text-left-for-large { text-align: left; }
 }
 
 
