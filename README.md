@@ -43,10 +43,11 @@ $ mv foundation-scss-standalone foundation
 $ rm scss-standalone.zip
 ```
 
-Generating concatenated and combined CSS and Javascript files
+Generating concatenated and combined CSS and Javascript files as well as  watch
+for new file changes.
 
 ```sh
-$ grunt watch
+$ grunt && grunt watch
 ```
 
 Dependencies
