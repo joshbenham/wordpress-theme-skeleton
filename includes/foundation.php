@@ -143,14 +143,19 @@ class SkeletonFoundationShortcodes {
 		extract(shortcode_atts(array(
 			'href' => '',
 			'permalink' => '',
-			'class' => ''
+			'class' => '',
+			'target' => ''
 		), $atts));
 
 		$link = (int)$permalink
 			? get_permalink((int)$permalink)
 			: $href;
 
-		return '<a href="'.$link.'" class="button '.esc_attr(trim($class)).'">'.do_shortcode($content).'</a>';
+		$target = $target
+		? ' target="'.$target.'"'
+		: '';
+
+		return '<a href="'.$link.'" class="button '.esc_attr(trim($class)).'"'.$target.'>'.do_shortcode($content).'</a>';
 	}
 
 
