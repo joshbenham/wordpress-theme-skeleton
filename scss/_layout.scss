@@ -28,7 +28,7 @@ Base styles for the layout
 
 .header {
 
-	.logo {
+	.header__logo {
 		@include inline-block;
 		width: 135px;
 		height: 66px;
