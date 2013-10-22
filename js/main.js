@@ -1,6 +1,5 @@
 /* ------------------------------------------------------------------ *\
 Component: Main;
-Version: 1.0.0;
 Author: Josh Benham;
 Author URI: http://github.com/joshbenham;
 
@@ -9,7 +8,7 @@ Base styles for the modules
 
 /* globals picturefill */
 
-;(function($) {
+;(function($, window, document, undefined) {
 	'use strict';
 
 
@@ -45,4 +44,4 @@ Base styles for the modules
 
 	});
 
-}(jQuery));
+}(jQuery, window, document));
