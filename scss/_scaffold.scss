@@ -15,6 +15,7 @@ Base styles and includes for foundation
 
 
 .header {
+
 	padding: 20px 0;
 	background: $secondary-color;
 	border-bottom: 1px solid $section-border-color;
@@ -25,6 +26,7 @@ Base styles and includes for foundation
 		line-height: 66px;
 		list-style-type: none;
 	}
+
 }
 
 .content {
@@ -44,12 +46,15 @@ Base styles and includes for foundation
 }
 
 .sidebar {
+
 	ul {
 		list-style-type: none;
 	}
+
 }
 
 .footer {
+
 	padding: 20px;
 	background: $secondary-color;
 	border-top: 1px solid $section-border-color;
@@ -57,4 +62,5 @@ Base styles and includes for foundation
 	ul {
 		list-style-type: none;
 	}
+
 }

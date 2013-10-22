@@ -10,13 +10,9 @@ Additional helper classes
 /* GENERIC ---------------------------------------------------------- */
 
 
-.full-width {
-	width: 100%;
-}
+.full-width { width: 100%; }
 
-.end {
-	margin-bottom: 0;
-}
+.end { margin-bottom: 0; }
 
 
 /* RESPONSIVE IMAGES ------------------------------------------------ */
@@ -73,11 +69,5 @@ Additional helper classes
 	content: " "; /* 1 */
 	display: table; /* 2 */
 }
-
-.clearfix:after {
-	clear: both;
-}
-
-.clearfix {
-	*zoom: 1;
-}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
