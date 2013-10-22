@@ -1,0 +1,23 @@
+/* ------------------------------------------------------------------ *\
+Component: Navigations;
+Author: Josh Benham;
+Author URI: http://github.com/joshbenham;
+
+Base styles for the Navigations
+\* ------------------------------------------------------------------ */
+
+
+/* DEFAULT ---------------------------------------------------------- */
+
+
+.navigation {
+	display: block;
+}
+
+
+/* INLINE ----------------------------------------------------------- */
+
+
+.navigation--inline {
+	@extend .navigation;
+}
