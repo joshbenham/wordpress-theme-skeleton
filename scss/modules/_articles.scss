@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------------ *\
+Component: Articles;
+Author: Josh Benham;
+Author URI: http://github.com/joshbenham;
+
+Base styles for all articles
+\* ------------------------------------------------------------------ */
+
+
+/* DEFAULT ---------------------------------------------------------- */
+
+
+.article {
+
+	display: block;
+
+	.article__header {
+
+	}
+
+	.article__title {
+
+	}
+
+	.article__permalink {
+
+	}
+
+	.article__section {
+
+	}
+
+	.article__footer {
+
+	}
+
+}
+
+
+/* 404 -------------------------------------------------------------- */
+
+
+.article-404 {
+
+	@extend .article;
+
+}
+
+
+/* EMPTY ------------------------------------------------------------ */
+
+
+.article-empty {
+
+	@extend .article;
+
+}
