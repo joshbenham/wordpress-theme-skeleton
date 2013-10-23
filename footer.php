@@ -2,11 +2,14 @@
 			<div class="row">
 
 				<div class="large-6 columns">
-					<div class="navigation--inline">&copy; Copyright <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'menu-container' ) ); ?></div>
+					<div class="navigation--inline">
+						<span class="footer__copyright">&copy; Copyright </span>
+						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'menu-container' ) ); ?>
+					</div>
 				</div>
 
 				<div class="large-6 columns">
-					<span class="right">by Josh Benham</span>
+					<span class="footer__copyright right-for-large">by Josh Benham</span>
 				</div>
 
 			</div>
