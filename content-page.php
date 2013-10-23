@@ -1,13 +1,13 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
 
-	<header>
-		<h1><?php the_title(); ?></h1>
+	<header class="article__header">
+		<h1 class="article__title"><?php the_title(); ?></h1>
 	</header>
 
-	<section>
+	<section class="article__section">
 		<?php the_content(); ?>
 	</section>
 
-	<footer></footer>
+	<footer class="article__footer"></footer>
 
 </article>
