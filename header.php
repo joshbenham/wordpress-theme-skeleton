@@ -30,7 +30,9 @@
 			<div class="row">
 
 				<div class="small-12 large-4 columns">
-					<a class="header__logo" href="<?php echo home_url( '/' ); ?>"><span><?php bloginfo('name'); ?></span></a>
+					<a class="header__logo" href="<?php echo home_url('/'); ?>">
+						<span class="hide"><?php bloginfo('name'); ?></span>
+					</a>
 				</div>
 
 				<div class="small-12 large-8 columns">
