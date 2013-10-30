@@ -41,10 +41,17 @@ add_filter('the_excerpt', 'shortcode_unautop');
 /* SHORTCODE PARAGRAPH HACK ----------------------------------------- */
 
 
-remove_filter('the_content', 'wpautop');
-add_filter('the_content', 'wpautop' , 99);
-add_filter('the_content', 'shortcode_unautop',100);
-add_filter('widget_text', 'do_shortcode');
+function clean_shortcodes($content) {
+	$array = array (
+		'<p>[' => '[',
+		']</p>' => ']',
+		']<br />' => ']'
+	);
+
+	return strtr($content, $array);
+}
+
+add_filter('the_content', 'clean_shortcodes');
 
 
 /* SCRIPTS & STYLES ------------------------------------------------- */
