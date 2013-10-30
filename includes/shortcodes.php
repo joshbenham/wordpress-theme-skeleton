@@ -4,6 +4,26 @@
 /* GENERIC ---------------------------------------------------------- */
 
 
+/* USER ACCESS ------------------------------------------------------ */
+
+
+add_shortcode('is_admin', 'user_is_admin');
+function user_is_admin($atts, $content = null) {
+	if (!is_user_logged_in() && !is_admin())
+		return '';
+
+	return do_shortcode($content);
+}
+
+add_shortcode('is_logged_in', 'user_is_logged_in');
+function user_is_logged_in($atts, $content = null) {
+	if (!is_user_logged_in())
+		return '';
+
+	return do_shortcode($content);
+}
+
+
 /* RESPONSIVE IMAGES ------------------------------------------------ */
 
 
