@@ -9,7 +9,7 @@
 				</div>
 
 				<div class="large-6 columns">
-					<span class="footer__copyright right-for-large">by Josh Benham</span>
+					<span class="footer__credits right-for-large">by Josh Benham</span>
 				</div>
 
 			</div>
