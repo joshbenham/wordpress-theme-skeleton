@@ -1,28 +1,35 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('article'); ?>>
+<?php if (have_posts()): ?>
 
-	<header class="article__header">
+	<?php while (have_posts()) : the_post(); ?>
 
-		<?php if (has_post_thumbnail()): ?>
-			<?php the_post_thumbnail(); ?>
+		<?php if (is_page()): ?>
+
+			<?php get_template_part('content', 'page'); ?>
+
+		<?php elseif (is_single()): ?>
+
+			<?php get_template_part('content', 'article'); ?>
+
+		<?php else: ?>
+
+			<?php get_template_part('content', 'default'); ?>
+
 		<?php endif; ?>
 
-		<h1 class="article__title">
-			<?php if (is_single()): ?>
-				<?php the_title(); ?>
-			<?php else: ?>
-				<a class="article__permalink" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'skeleton' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
-					<?php the_title(); ?>
-				</a>
-			<?php endif; ?>
-		</h1>
+	<?php endwhile; ?>
 
-	</header>
+<?php elseif (is_404()): ?>
 
-	<section class="article__section">
-		<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'skeleton' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'skeleton' ), 'after' => '</div>' ) ); ?>
-	</section>
+	<?php get_template_part('content', '404'); ?>
 
-	<footer class="article__footer"></footer>
+<?php else: ?>
 
-</article>
+	<?php get_template_part('content', 'empty'); ?>
+
+<?php endif; ?>
+
+<?php if ( $wp_query->max_num_pages > 1 ) : ?>
+
+	<?php get_template_part('pagination'); ?>
+
+<?php endif; ?>
