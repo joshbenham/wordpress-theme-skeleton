@@ -38,6 +38,8 @@ class SkeletonFoundationShortcodes {
 		add_shortcode('label', array($this, 'label'));
 		/* ALERTS --------------------------------------------------- */
 		add_shortcode('alert', array($this, 'alert'));
+		/* FLEX VIDEO ----------------------------------------------- */
+		add_shortcode('video', array($this, 'video'));
 	}
 
 	public function transform($string) {
@@ -195,6 +197,14 @@ class SkeletonFoundationShortcodes {
 		), $atts));
 
 		return '<div data-alert class="alert-box '.esc_attr(trim($class)).'">'.do_shortcode($content).'<a href="#" class="close">&times;</a></div>';
+	}
+
+
+	/* SHORTCODES: FLEX VIDEO --------------------------------------- */
+
+
+	public function video($atts, $content = null) {
+		return '<div class="flex-video">'.do_shortcode($content).'</div>';
 	}
 
 
