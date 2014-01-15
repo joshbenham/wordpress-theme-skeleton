@@ -71,6 +71,8 @@ class SkeletonFoundationShortcodes {
 		$column_classes = array(
 			'small' => '',
 			'small_offset' => '',
+			'medium' => '',
+			'medium_offset' => '',
 			'large' => '',
 			'large_offset' => '',
 			'push' => '',
