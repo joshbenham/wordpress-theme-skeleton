@@ -31,6 +31,44 @@ Additional helper classes
 }
 
 
+/* TABLES ----------------------------------------------------------- */
+
+
+.table {
+	display: table;
+}
+
+.table--row {
+	display: table-row;
+}
+
+.table--cell {
+	display: table-cell;
+}
+
+.table--middle {
+	vertical-align: middle;
+}
+
+@media only screen and (max-width: $small-screen - 1) {
+	.mobile--table {
+		display: table;
+	}
+
+	.mobile--table--row {
+		display: table-row;
+	}
+
+	.mobile--table--cell {
+		display: table-cell;
+	}
+
+	.mobile--table--middle {
+		vertical-align: middle;
+	}
+}
+
+
 /* GRID ------------------------------------------------------------- */
 
 
