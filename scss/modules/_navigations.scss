@@ -11,7 +11,9 @@ Base styles for the Navigations
 
 
 .navigation {
+
 	display: block;
+
 }
 
 
@@ -19,5 +21,7 @@ Base styles for the Navigations
 
 
 .navigation--inline {
+
 	@extend .navigation;
+
 }
