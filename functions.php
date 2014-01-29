@@ -79,8 +79,9 @@ add_action('wp_enqueue_scripts', 'skeleton_enqueue_styles');
 function skeleton_remove_media_version($src) {
 	if (strpos($src, 'ver=')) {
 		$src = remove_query_arg('ver', $src);
-		return $src;
 	}
+
+	return $src;
 }
 
 add_filter('style_loader_src', 'skeleton_remove_media_version');
