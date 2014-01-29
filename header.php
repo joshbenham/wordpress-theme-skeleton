@@ -7,7 +7,9 @@
 		<meta charset="utf-8">
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
+		<link rel="dns-prefetch" href="//www.google-analytics.com">
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		<link rel="dns-prefetch" href="//themes.googleusercontent.com">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
