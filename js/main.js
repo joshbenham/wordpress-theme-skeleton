@@ -6,7 +6,7 @@ Author URI: http://github.com/joshbenham;
 Base styles for the modules
 \* ------------------------------------------------------------------ */
 
-/* globals picturefill */
+/* globals picturefill, console */
 
 ;(function($, window, document, undefined) {
 	'use strict';
@@ -18,29 +18,42 @@ Base styles for the modules
 	$(document).foundation();
 
 
-/* RESPONSIVE IMAGE ------------------------------------------------- */
-
-
-	var triggerPicturefill = function(e) {
-		/* jshint validthis:true */
-		$(this).attr('data-picture','').removeClass('rimg-block');
-		picturefill();
-
-		if (!$('.rimg:not([data-picture])').length) {
-			$('.rimg').unbind('enterviewport');
-		}
-	};
-
-	$('.rimg:not([data-picture])')
-		.on('enterviewport', triggerPicturefill)
-		.bullseye()
-		.addClass('rimg-block');
-
-
 /* ON READY --------------------------------------------------------- */
 
 
 	$(function() {
+
+
+		/* RESPONSIVE IMAGE ----------------------------------------- */
+
+
+		var rimg = {
+
+			init: function(e) {
+				$('.rimg').each(function() {
+					var $i = $(this);
+					var height = $i.data('height') / $i.data('width') * $i.parent().width();
+					$i.css('height', height);
+				});
+			},
+
+			trigger: function(e) {
+				/* jshint validthis:true */
+				$(this).attr('data-picture','');
+				picturefill();
+
+				if (!$('.rimg:not([data-picture])').length) {
+					$('.rimg').unbind('enterviewport');
+				}
+			}
+
+		};
+
+		rimg.init();
+
+		$('.rimg:not([data-picture])')
+			.on('enterviewport', rimg.trigger)
+			.bullseye();
 
 	});
 

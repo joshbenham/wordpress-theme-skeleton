@@ -56,7 +56,7 @@ function responsive_image($atts) {
 		list($width, $height, $type, $attr) = getimagesize($src);
 
 		$loop = 0;
-		$string = '<span data-alt="'.$alt.'" class="rimg '.$class.'">';
+		$string = '<span data-alt="'.$alt.'" class="rimg rimg-placeholder '.$class.'" data-width="'.$width.'" data-height="'.$height.'">';
 		foreach (screen_resolutions() as $resolution) {
 
 			if ($resolution <= $width) {
