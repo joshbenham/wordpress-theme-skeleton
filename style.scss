@@ -27,16 +27,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "scss/scaffold";
 
 
-/* MIXINS ----------------------------------------------------------- */
-
-
-@import "compass/css3/inline-block";
-
-
 /* UTILITIES -------------------------------------------------------- */
 
 
 @import "scss/mixins/utilities";
+
+
+/* MIXINS ----------------------------------------------------------- */
+
+
+@import "compass/css3/inline-block";
+@import "scss/mixins/icons";
 
 
 /* SETTINGS --------------------------------------------------------- */
@@ -62,9 +63,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import "scss/modules/articles";
 @import "scss/modules/forms";
-@import "scss/modules/icons";
 @import "scss/modules/navigations";
-@import "scss/modules/pages";
 @import "scss/modules/paginations";
 
 
