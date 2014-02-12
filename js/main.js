@@ -37,14 +37,27 @@ Base styles for the modules
 				});
 			},
 
+			loaded: function($el) {
+				var $parent = $el.closest('.rimg');
+
+				if ($el.height() > 0) {
+						$parent.attr('style', '');
+						$el.fadeIn('1000');
+				} else {
+					$el.load(function() {
+						$parent.attr('style', '');
+						$el.fadeIn('1000');
+					});
+				}
+			},
+
 			trigger: function(e) {
 				/* jshint validthis:true */
 				$(this).attr('data-picture','');
 				picturefill();
 
-				if (!$('.rimg:not([data-picture])').length) {
-					$('.rimg').unbind('enterviewport');
-				}
+				$(this).unbind('enterviewport');
+				rimg.loaded($(this).find('img'));
 			}
 
 		};
