@@ -6,13 +6,13 @@
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
       scripts: [
-        'foundation/js/vendor/jquery.js',
-        'foundation/js/foundation/foundation.js',
-        'foundation/js/foundation/foundation.forms.js',
-        'foundation/js/foundation/foundation.section.js',
-        'foundation/js/foundation/foundation.tooltips.js',
-        'js/vendor/bullseye/bullseye.js',
-        'js/vendor/picturefill/picturefill.js',
+        'vendor/foundation/js/vendor/jquery.js',
+        'vendor/foundation/js/foundation/foundation.js',
+        'vendor/foundation/js/foundation/foundation.forms.js',
+        'vendor/foundation/js/foundation/foundation.section.js',
+        'vendor/foundation/js/foundation/foundation.tooltips.js',
+        'vendor/bullseye/bullseye.js',
+        'vendor/picturefill/picturefill.js',
         'js/main.js'
       ],
       images: [
