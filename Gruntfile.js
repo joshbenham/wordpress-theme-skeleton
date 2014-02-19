@@ -21,7 +21,8 @@
       ],
       scss: [
         'style.scss',
-        'foundation/scss/**/*.scss',
+        'vendor/foundation/scss/**/**/*.scss',
+        'vendor/**/*.scss',
         'scss/**/*.scss'
       ],
 
