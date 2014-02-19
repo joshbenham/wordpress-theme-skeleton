@@ -58,7 +58,7 @@ add_filter('the_content', 'clean_shortcodes');
 
 
 function skeleton_enqueue_scripts() {
-	wp_register_script('modernizr', get_template_directory_uri() . '/foundation/js/vendor/custom.modernizr.js', false, '2.6.2');
+	wp_register_script('modernizr', get_template_directory_uri() . '/vendor/foundation/js/vendor/custom.modernizr.js', false, '2.6.2');
 	wp_enqueue_script('modernizr');
 
 	wp_deregister_script('jquery');

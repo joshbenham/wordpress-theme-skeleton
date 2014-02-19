@@ -20,7 +20,7 @@
 		<?php wp_head(); ?>
 
 		<!--[if lt IE 9]>
-			<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/respond/respond.js"></script>
+			<script src="<?php echo get_template_directory_uri(); ?>/vendor/respond/respond.js"></script>
 		<![endif]-->
 	</head>
 	<body <?php body_class(); ?>>
