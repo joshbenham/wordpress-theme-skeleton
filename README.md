@@ -39,7 +39,7 @@ Install the standalone Foundation
 ```sh
 $ wget https://github.com/zurb/foundation/archive/scss-standalone.zip
 $ unzip scss-standalone
-$ mv foundation-scss-standalone foundation
+$ mv foundation-scss-standalone vendor/foundation
 $ rm scss-standalone.zip
 ```
 
