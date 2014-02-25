@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------------ *\
+Component: Mixins;
+Author: Josh Benham;
+Author URI: http://github.com/joshbenham;
+
+Additional mixins
+\* ------------------------------------------------------------------ */
+
+
+/* ANIMATIONS ------------------------------------------------------- */
+
+
+@mixin perspective($string) {
+	-webkit-perspective: $string;
+	-moz-perspective: $string;
+	perspective: $string;
+}
+
+@mixin transform-style($string) {
+	-o-transform-style: $string;
+	-webkit-transform-style: $string;
+	-moz-transform-style: $string;
+	-ms-transform-style: $string;
+	transform-style: $string;
+}
+
+@mixin animation($string) {
+	-webkit-animation: $string;
+	-moz-animation: $string;
+	-o-animation: $string;
+	-ms-animation: $string;
+	animation: $string;
+}
